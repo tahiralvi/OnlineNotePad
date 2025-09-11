@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Coding\\OnlineNotePad\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40F2F8C1-CBB6-458C-8670-BFA63937B90D}|OnlineNotePad\\OnlineNotePad.csproj|d:\\coding\\onlinenotepad\\onlinenotepad\\views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F2F8C1-CBB6-458C-8670-BFA63937B90D}|OnlineNotePad\\OnlineNotePad.csproj|solutionrelative:onlinenotepad\\views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Coding\\OnlineNotePad\\OnlineNotePad\\Views\\Documents\\Delete.cshtml",
+              "RelativeDocumentMoniker": "OnlineNotePad\\Views\\Documents\\Delete.cshtml",
+              "ToolTip": "D:\\Coding\\OnlineNotePad\\OnlineNotePad\\Views\\Documents\\Delete.cshtml",
+              "RelativeToolTip": "OnlineNotePad\\Views\\Documents\\Delete.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-11T18:52:03.686Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
