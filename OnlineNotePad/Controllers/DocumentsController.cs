@@ -115,18 +115,22 @@ namespace OnlineNotePad.Controllers
             {
                 return NotFound();
             }
-
             var document = await _context.Documents
-                .Include(d => d.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (document == null)
+            .Include(d => d.User)
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                if (document == null)
+                {
+                    return NotFound();
+                }
+                if (document.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                {
+                    return NotFound();
+                }
             }
-            if (document.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
-            {
-                return NotFound();
-            }
+                
             return View(document);
         }
 
@@ -136,12 +140,15 @@ namespace OnlineNotePad.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var document = await _context.Documents.FindAsync(id);
-            if (document != null)
+            if (ModelState.IsValid)
             {
-                _context.Documents.Remove(document);
+                if (document != null)
+                {
+                    _context.Documents.Remove(document);
+                }
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
